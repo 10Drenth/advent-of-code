@@ -1,0 +1,5 @@
+x - A - Rock    - 1
+y - B - Paper   - 2
+z - C - Scissor - 3
+
+L: 0, D: 3, W: 6

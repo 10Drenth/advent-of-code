@@ -1,0 +1,28 @@
+fn main() {
+    let mut input = include_str!("../input.txt").split("\n\n");
+
+    if let Some(init_stack) = input.next(){
+        let mut init_stack_lines = init_stack.lines().collect::<Vec<&str>>();
+        if let Some (l1) = init_stack_lines.pop(){
+            let num_of_stacks = l1.split(" ").collect::<Vec<_>>();
+
+            println!("{:?}", num_of_stacks);
+
+            while let Some (l) = init_stack_lines.pop(){
+                println!("{}", l);
+            }
+        }
+
+
+        if let Some(instructions) = input.next(){
+            println!("{}", instructions);
+        }
+    }
+}
+
+fn read_line(line: &str) -> Option<i32>{
+    match line.parse::<i32>(){
+        Ok(n) => Some(n),
+        _ => None
+    }
+}

@@ -1,3 +1,4 @@
+//test
 fn main() {
     let instrs = include_str!("../input.txt")
         .lines().flat_map(parse_instr);
